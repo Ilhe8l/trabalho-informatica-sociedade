@@ -100,3 +100,9 @@ a {
     transform: none;
   }
 }
+
+@media (max-width: 760px) {
+  .section {
+    padding: 80px 20px;
+  }
+}

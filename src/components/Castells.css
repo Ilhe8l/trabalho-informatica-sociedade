@@ -45,3 +45,10 @@
 .castells-note strong {
   color: var(--coral);
 }
+
+@media (max-width: 560px) {
+  .idea {
+    padding: 24px;
+    gap: 16px;
+  }
+}

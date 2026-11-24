@@ -1,0 +1,48 @@
+.numbers-grid {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.number-card {
+  padding: 32px 28px;
+  border-radius: 24px;
+  background: var(--blue-soft);
+  transition: transform 0.25s ease;
+}
+
+.number-card:hover {
+  transform: translateY(-4px);
+}
+
+.number-card strong {
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: -0.02em;
+}
+
+.number-card p {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.number-card.highlight {
+  background: var(--blue);
+}
+
+.number-card.highlight strong {
+  color: var(--white);
+}
+
+.number-card.highlight p {
+  color: var(--blue-soft);
+}
+
+.numbers-source {
+  margin-top: 32px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}

@@ -1,0 +1,47 @@
+.ideas {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.idea {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 28px 32px;
+  border-radius: 24px;
+  border: 2px solid var(--blue-soft);
+  transition: border-color 0.25s ease;
+}
+
+.idea:hover {
+  border-color: var(--blue);
+}
+
+.idea-dot {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.idea h3 {
+  font-size: 1.3rem;
+}
+
+.idea p {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.castells-note {
+  margin-top: 40px;
+  font-size: 1.2rem;
+}
+
+.castells-note strong {
+  color: var(--coral);
+}

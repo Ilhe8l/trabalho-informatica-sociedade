@@ -1,6 +1,7 @@
 import Hero from './components/Hero'
 import Numbers from './components/Numbers'
 import Thesis from './components/Thesis'
+import Castells from './components/Castells'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Hero />
       <Numbers />
       <Thesis />
+      <Castells />
     </>
   )
 }

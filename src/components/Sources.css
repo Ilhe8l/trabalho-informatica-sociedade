@@ -1,0 +1,35 @@
+.sources {
+  padding: 80px 24px 48px;
+  background: var(--ink);
+  color: var(--blue-soft);
+}
+
+.sources h2 {
+  font-size: 1.4rem;
+  color: var(--white);
+}
+
+.sources ul {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sources a {
+  color: var(--blue-soft);
+  text-decoration-color: var(--blue);
+  text-underline-offset: 4px;
+}
+
+.sources a:hover {
+  color: var(--white);
+}
+
+.credits {
+  margin-top: 56px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}

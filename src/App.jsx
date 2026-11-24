@@ -5,8 +5,11 @@ import Castells from './components/Castells'
 import Cases from './components/Cases'
 import Proposal from './components/Proposal'
 import Sources from './components/Sources'
+import { useReveal } from './hooks/useReveal'
 
 function App() {
+  useReveal()
+
   return (
     <>
       <Hero />

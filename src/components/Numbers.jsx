@@ -32,7 +32,7 @@ const numbers = [
 function Numbers() {
   return (
     <section id="numeros" className="section numbers">
-      <div className="container">
+      <div className="container reveal">
         <span className="tag">O tamanho do problema</span>
         <h2 className="section-title">O gov.br não é mais um caminho. É o caminho.</h2>
         <p className="section-lead">

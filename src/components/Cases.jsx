@@ -9,7 +9,7 @@ import './Placeholder.css'
 function Cases() {
   return (
     <section id="casos" className="section">
-      <div className="container">
+      <div className="container reveal">
         <span className="tag">Casos concretos</span>
         <h2 className="section-title">Isso já aconteceu</h2>
 

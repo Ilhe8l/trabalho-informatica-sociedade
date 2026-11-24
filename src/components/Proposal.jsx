@@ -10,7 +10,7 @@ import './Placeholder.css'
 function Proposal() {
   return (
     <section id="proposta" className="section proposal">
-      <div className="container">
+      <div className="container reveal">
         <span className="tag">O que deveria mudar</span>
         <h2 className="section-title">Nossa proposta</h2>
 

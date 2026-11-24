@@ -15,7 +15,9 @@
   height: 560px;
   background: var(--blue);
   border-radius: 42% 58% 63% 37% / 44% 41% 59% 56%;
-  animation: morph 14s ease-in-out infinite;
+  animation:
+    morph 14s ease-in-out infinite,
+    grow 1.2s ease both;
 }
 
 @keyframes morph {
@@ -38,6 +40,7 @@
   position: relative;
   max-width: 640px;
   color: var(--white);
+  animation: fade-up 1s ease both;
 }
 
 .hero .tag {
@@ -75,4 +78,18 @@
 
 .hero-button:hover {
   transform: translateY(-2px);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+@keyframes grow {
+  from {
+    scale: 0.6;
+    opacity: 0;
+  }
 }

@@ -18,7 +18,7 @@ const steps = [
 function Thesis() {
   return (
     <section id="tese" className="section thesis">
-      <div className="container">
+      <div className="container reveal">
         <span className="tag">Nossa tese</span>
         <blockquote>
           O gov.br virou porta única. E quem não passa por ela perde direito e perde voz.

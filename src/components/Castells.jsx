@@ -18,7 +18,7 @@ const ideas = [
 function Castells() {
   return (
     <section id="castells" className="section castells">
-      <div className="container">
+      <div className="container reveal">
         <span className="tag">O que a teoria mostra</span>
         <h2 className="section-title">Não é que a pessoa "não sabe mexer".</h2>
         <p className="section-lead">

@@ -1,9 +1,10 @@
+import Circles from './Circles'
 import './Castells.css'
 
 const ideas = [
   {
     title: 'A rede conecta e desconecta',
-    text: 'Pra Castells, a rede liga o que é útil pra ela e deixa o resto de fora. Quando o Estado passa a falar com o cidadão pela rede, ficar fora dela é ficar fora da cidadania.',
+    text: 'Pro sociólogo Manuel Castells, a rede liga o que é útil pra ela e deixa o resto de fora. Quando o Estado passa a falar com o cidadão pela rede, ficar fora dela é ficar fora da cidadania.',
   },
   {
     title: 'Poder é programar a rede',
@@ -11,35 +12,41 @@ const ideas = [
   },
   {
     title: 'Surgem os atravessadores',
-    text: 'Lan house cobrando R$ 20 a R$ 40, despachante, o neto que faz o gov.br da avó. E também o golpista. Quem está fora passa a depender de alguém pra entrar.',
+    text: 'Lan house cobrando de R$ 20 a R$ 40, despachante, o neto que faz o gov.br da avó. E o golpista também. Quem está fora passa a depender de alguém pra entrar.',
   },
+]
+
+const circles = [
+  { size: 180, top: 160, left: -70 },
+  { size: 90, bottom: 260, right: '8%' },
 ]
 
 function Castells() {
   return (
     <section id="castells" className="section castells">
+      <Circles items={circles} />
       <div className="container reveal">
-        <span className="tag">O que a teoria mostra</span>
-        <h2 className="section-title">Não é que a pessoa "não sabe mexer".</h2>
-        <p className="section-lead">
-          Lendo pelo Manuel Castells e a sociedade em rede, o problema sai do indivíduo e vai
-          pro desenho do sistema.
-        </p>
+        <div className="castells-layout">
+          <div>
+            <h2 className="section-title">Não é que a pessoa "não sabe mexer".</h2>
+            <p className="section-lead">
+              Olhando pela teoria da sociedade em rede, o problema sai do indivíduo e vai
+              pro desenho do sistema.
+            </p>
+          </div>
 
-        <div className="ideas">
-          {ideas.map((idea) => (
-            <div key={idea.title} className="idea">
-              <div className="idea-dot" />
-              <div>
+          <ul className="ideas">
+            {ideas.map((idea) => (
+              <li key={idea.title}>
                 <h3>{idea.title}</h3>
                 <p>{idea.text}</p>
-              </div>
-            </div>
-          ))}
+              </li>
+            ))}
+          </ul>
         </div>
 
         <p className="castells-note">
-          Ter conta não é estar dentro: <strong>45 milhões</strong> de contas não foram usadas
+          Ter conta não é estar dentro. <span>45 milhões</span> de contas não foram usadas
           nenhuma vez em 2025.
         </p>
       </div>

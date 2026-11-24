@@ -1,5 +1,7 @@
 .sources {
+  margin-top: 120px;
   padding: 80px 24px 48px;
+  border-radius: 64px 64px 0 0;
   background: var(--ink);
   color: var(--blue-soft);
 }
@@ -13,9 +15,10 @@
   margin: 24px 0 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 48px;
+  font-size: 0.95rem;
 }
 
 .sources a {
@@ -32,4 +35,14 @@
   margin-top: 56px;
   font-size: 0.85rem;
   opacity: 0.6;
+}
+
+@media (max-width: 760px) {
+  .sources {
+    border-radius: 40px 40px 0 0;
+  }
+
+  .sources ul {
+    grid-template-columns: 1fr;
+  }
 }

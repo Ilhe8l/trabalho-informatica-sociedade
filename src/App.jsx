@@ -1,5 +1,11 @@
+import Hero from './components/Hero'
+
 function App() {
-  return <h1>Quem fica de fora do gov.br?</h1>
+  return (
+    <>
+      <Hero />
+    </>
+  )
 }
 
 export default App

@@ -1,0 +1,17 @@
+.blobs {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-blob {
+  position: absolute;
+  fill: var(--blue-soft);
+}
+
+@media (max-width: 560px) {
+  .bg-blob {
+    scale: 0.6;
+  }
+}

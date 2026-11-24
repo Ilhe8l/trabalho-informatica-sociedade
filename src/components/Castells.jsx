@@ -1,4 +1,4 @@
-import Circles from './Circles'
+import Blobs from './Blobs'
 import './Castells.css'
 
 const ideas = [
@@ -16,15 +16,16 @@ const ideas = [
   },
 ]
 
-const circles = [
-  { size: 180, top: 160, left: -70 },
-  { size: 90, bottom: 260, right: '8%' },
+const blobs = [
+  { size: 700, top: 20, left: -260, rotate: 70 },
+  { size: 420, top: '38%', right: -110, points: 6, rotate: 10 },
+  { size: 340, top: -60, right: '26%', points: 6, rotate: 150 },
 ]
 
 function Castells() {
   return (
     <section id="castells" className="section castells">
-      <Circles items={circles} />
+      <Blobs items={blobs} />
       <div className="container reveal">
         <div className="castells-layout">
           <div>

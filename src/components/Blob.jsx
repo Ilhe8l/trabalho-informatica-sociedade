@@ -1,17 +1,22 @@
 import { useEffect, useRef } from 'react'
 
-const POINTS = 9
 const SIZE = 200
 
-const waves = Array.from({ length: POINTS }, () => ({
-  speed: 0.25 + Math.random() * 0.35,
-  phase: Math.random() * Math.PI * 2,
-}))
+function createShape(points, irregular) {
+  return Array.from({ length: points }, () => ({
+    base: 1 - Math.random() * irregular,
+    speed: 0.25 + Math.random() * 0.35,
+    phase: Math.random() * Math.PI * 2,
+  }))
+}
 
-function getPoints(time) {
-  return waves.map((wave, i) => {
-    const angle = (i / POINTS) * Math.PI * 2
-    const radius = 78 + Math.sin(time * wave.speed + wave.phase) * 9 + Math.sin(time * wave.speed * 0.6 + i) * 5
+function getPoints(shape, time) {
+  return shape.map((point, i) => {
+    const angle = (i / shape.length) * Math.PI * 2
+    const radius =
+      78 * point.base +
+      Math.sin(time * point.speed + point.phase) * 9 +
+      Math.sin(time * point.speed * 0.6 + i) * 5
     return [SIZE / 2 + Math.cos(angle) * radius, SIZE / 2 + Math.sin(angle) * radius]
   })
 }
@@ -34,25 +39,32 @@ function toPath(points) {
   return path + ' Z'
 }
 
-function Blob({ className }) {
+function Blob({ className, style, points = 9, irregular = 0, animated = true }) {
   const pathRef = useRef(null)
+  const shapeRef = useRef(null)
+
+  if (!shapeRef.current) {
+    shapeRef.current = createShape(points, irregular)
+  }
 
   useEffect(() => {
+    if (!animated) return
+
     let frame
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
     const draw = (now) => {
-      pathRef.current.setAttribute('d', toPath(getPoints(now / 1000)))
+      pathRef.current.setAttribute('d', toPath(getPoints(shapeRef.current, now / 1000)))
       if (!reduceMotion) frame = requestAnimationFrame(draw)
     }
 
     frame = requestAnimationFrame(draw)
     return () => cancelAnimationFrame(frame)
-  }, [])
+  }, [animated])
 
   return (
-    <svg className={className} viewBox={`0 0 ${SIZE} ${SIZE}`} aria-hidden="true">
-      <path ref={pathRef} d={toPath(getPoints(0))} />
+    <svg className={className} style={style} viewBox={`0 0 ${SIZE} ${SIZE}`} aria-hidden="true">
+      <path ref={pathRef} d={toPath(getPoints(shapeRef.current, 0))} />
     </svg>
   )
 }

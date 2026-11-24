@@ -1,5 +1,5 @@
 import './Placeholder.css'
-import Circles from './Circles'
+import Blobs from './Blobs'
 
 // Seção da proposta, é a parte da Pessoa 1.
 // Mesma coisa dos casos: tá vazia de propósito, pode mexer à vontade.
@@ -8,15 +8,16 @@ import Circles from './Circles'
 // No pesquisa-contexto-e-tese.md tem umas ideias tiradas das recomendações do TCU,
 // se ajudar.
 
-const circles = [
-  { size: 200, bottom: -60, right: '10%', color: '#d6e1fb' },
-  { size: 100, top: 48, right: '18%', color: '#d6e1fb' },
+const blobs = [
+  { size: 640, bottom: -220, right: '4%', color: '#d6e1fb', rotate: 35 },
+  { size: 390, top: -40, left: -110, color: '#d6e1fb', points: 6 },
+  { size: 340, top: -80, right: '30%', color: '#d6e1fb', rotate: -50 },
 ]
 
 function Proposal() {
   return (
     <section id="proposta" className="section proposal">
-      <Circles items={circles} />
+      <Blobs items={blobs} />
       <div className="container reveal">
         <h2 className="section-title">Nossa proposta</h2>
 

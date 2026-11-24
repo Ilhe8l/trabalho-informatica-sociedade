@@ -1,4 +1,4 @@
-import Circles from './Circles'
+import Blobs from './Blobs'
 import './Thesis.css'
 
 const steps = [
@@ -16,15 +16,17 @@ const steps = [
   },
 ]
 
-const circles = [
-  { size: 280, top: -110, right: '6%', color: '#2b5ce6' },
-  { size: 130, bottom: 160, left: -60, color: '#2b5ce6' },
+const blobs = [
+  { size: 840, top: -220, right: -140, color: '#2b5ce6', rotate: 40 },
+  { size: 500, top: '34%', left: -180, color: '#2b5ce6', points: 6 },
+  { size: 420, top: '58%', right: -120, color: '#2b5ce6', rotate: -20 },
+  { size: 360, bottom: -80, left: '30%', color: '#2b5ce6', points: 6, rotate: 80 },
 ]
 
 function Thesis() {
   return (
     <section id="tese" className="section thesis">
-      <Circles items={circles} />
+      <Blobs items={blobs} />
       <div className="container reveal">
         <blockquote>
           O gov.br virou porta única. Quem não passa por ela perde direito e perde voz.

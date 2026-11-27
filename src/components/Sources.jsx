@@ -26,6 +26,34 @@ const sources = [
     url: 'https://repositorio.enap.gov.br/handle/1/8053',
   },
   {
+    name: 'Jardim, L. O PPA Federal 2024-2027: análise da plataforma Brasil Participativo (Enap, 2024)',
+    url: 'https://repositorio.enap.gov.br/server/api/core/bitstreams/b478c712-8fa6-4c58-b779-490269381fd9/content',
+  },
+  {
+    name: 'Brasil Participativo, programas do PPA',
+    url: 'https://brasilparticipativo.presidencia.gov.br/processes/programas',
+  },
+  {
+    name: 'Senado Notícias. PPA participativo será levado às capitais brasileiras (2023)',
+    url: 'https://www12.senado.leg.br/noticias/videos/2023/05/ppa-participativo-sera-levado-as-capitais-brasileiras-anuncia-ministra-simone-tebet',
+  },
+  {
+    name: 'PPA Participativo, plenária de Porto Alegre (vídeo)',
+    url: 'https://www.youtube.com/watch?v=H2EFsC8x6NQ',
+  },
+  {
+    name: 'FGV EAESP. Exclusão digital afetou acesso ao auxílio emergencial',
+    url: 'https://eaesp.fgv.br/administracao-publica/gestao-publica/exclusao-digital-afetou-acesso-ao-auxilio-emergencial-durante-a-pandemia-especialmente-para-as-classes-d-e-e',
+  },
+  {
+    name: 'IEA-USP. Boletim Políticas Públicas & Sociedade nº 5 (maio de 2020)',
+    url: 'https://coracaoesaude.iea.usp.br/wp-content/uploads/2020/05/BoletimPPS_5_8maio_FINAL.pdf',
+  },
+  {
+    name: 'Cetic.br, TIC Governo Eletrônico',
+    url: 'https://cetic.br/pt/pesquisa/governo-eletronico/',
+  },
+  {
     name: 'Castells, M. A Sociedade em Rede (1999) e A Galáxia da Internet (2003)',
   },
 ]
@@ -49,7 +77,10 @@ function Sources() {
           ))}
         </ul>
 
-        <p className="credits">Seminário de Informática e Sociedade, Ifes, 2026.</p>
+        <p className="credits">
+          Eduardo de Oliveira, Gabriel Marinho e Guilherme do Carmo · Prof. Gilmar Luiz
+          Vassoler · Informática e Sociedade, Ifes, 2026.
+        </p>
       </div>
     </footer>
   )

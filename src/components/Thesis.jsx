@@ -48,32 +48,6 @@ function Thesis() {
             Gente indo até a agência pra conseguir entrar na porta digital.
           </p>
         </div>
-
-        <div className="voice">
-          <div className="voice-text">
-            <h3>E a participação?</h3>
-            <p>
-              O PPA Participativo de 2023 foi votado numa plataforma com login gov.br. Foi um
-              salto enorme de escala. Mas quem está fora da rede não entra nem na conta de
-              quem participou.
-            </p>
-          </div>
-
-          <div className="voice-chart" aria-label="1,4 milhão de pessoas na plataforma contra 34 mil nas plenárias presenciais">
-            <div className="voice-item">
-              <span className="dot big" />
-              <span>
-                <b>1,4 mi</b> na plataforma
-              </span>
-            </div>
-            <div className="voice-item">
-              <span className="dot small" />
-              <span>
-                <b>34 mil</b> nas plenárias
-              </span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

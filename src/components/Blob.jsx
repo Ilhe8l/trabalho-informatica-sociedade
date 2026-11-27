@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const SIZE = 200
 
@@ -41,11 +41,7 @@ function toPath(points) {
 
 function Blob({ className, style, points = 9, irregular = 0, animated = true }) {
   const pathRef = useRef(null)
-  const shapeRef = useRef(null)
-
-  if (!shapeRef.current) {
-    shapeRef.current = createShape(points, irregular)
-  }
+  const [shape] = useState(() => createShape(points, irregular))
 
   useEffect(() => {
     if (!animated) return
@@ -54,17 +50,17 @@ function Blob({ className, style, points = 9, irregular = 0, animated = true }) 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
     const draw = (now) => {
-      pathRef.current.setAttribute('d', toPath(getPoints(shapeRef.current, now / 1000)))
+      pathRef.current.setAttribute('d', toPath(getPoints(shape, now / 1000)))
       if (!reduceMotion) frame = requestAnimationFrame(draw)
     }
 
     frame = requestAnimationFrame(draw)
     return () => cancelAnimationFrame(frame)
-  }, [animated])
+  }, [animated, shape])
 
   return (
     <svg className={className} style={style} viewBox={`0 0 ${SIZE} ${SIZE}`} aria-hidden="true">
-      <path ref={pathRef} d={toPath(getPoints(shapeRef.current, 0))} />
+      <path ref={pathRef} d={toPath(getPoints(shape, 0))} />
     </svg>
   )
 }

@@ -17,9 +17,9 @@ const ideas = [
 ]
 
 const blobs = [
-  { size: 700, top: 20, left: -260, rotate: 70 },
-  { size: 420, top: '38%', right: -110, points: 6, rotate: 10 },
-  { size: 340, top: -60, right: '26%', points: 6, rotate: 150 },
+  { size: 600, top: 60, left: -330, rotate: 70 },
+  { size: 420, top: '40%', right: -190, points: 6, rotate: 10 },
+  { size: 340, bottom: 60, left: -150, points: 6, rotate: 150 },
 ]
 
 function Castells() {

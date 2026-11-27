@@ -2,9 +2,9 @@ import Blobs from './Blobs'
 import './Cases.css'
 
 const blobs = [
-  { size: 530, top: -120, right: -150, rotate: -15 },
-  { size: 460, top: '10%', left: -190, points: 6, rotate: 30 },
-  { size: 420, bottom: -120, right: -120, rotate: 80 },
+  { size: 520, top: 40, right: -260, rotate: -15 },
+  { size: 460, top: '18%', left: -250, points: 6, rotate: 30 },
+  { size: 440, bottom: 60, right: -220, rotate: 80 },
 ]
 
 const emergencyProblems = [

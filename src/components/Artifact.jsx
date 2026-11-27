@@ -20,8 +20,8 @@ const choices = [
 ]
 
 const blobs = [
-  { size: 480, top: -100, left: -200, rotate: 20 },
-  { size: 400, bottom: -140, right: -140, points: 6, rotate: -40 },
+  { size: 480, top: 40, left: -260, rotate: 20 },
+  { size: 420, bottom: 40, right: -220, points: 6, rotate: -40 },
 ]
 
 function Artifact() {

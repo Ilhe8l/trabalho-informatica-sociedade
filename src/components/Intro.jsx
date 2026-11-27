@@ -17,8 +17,8 @@ const topics = [
 ]
 
 const blobs = [
-  { size: 460, top: -140, left: -200, rotate: 45 },
-  { size: 380, bottom: -160, right: -120, points: 6, rotate: -20 },
+  { size: 460, top: 40, left: -250, rotate: 45 },
+  { size: 400, bottom: 40, right: -200, points: 6, rotate: -20 },
 ]
 
 function Intro() {

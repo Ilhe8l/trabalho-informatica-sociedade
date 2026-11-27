@@ -10,9 +10,9 @@ const numbers = [
 ]
 
 const blobs = [
-  { size: 780, top: -200, right: -220, rotate: 20 },
-  { size: 480, top: '46%', left: -170, points: 6, rotate: -30 },
-  { size: 520, top: -220, left: -230, points: 6, rotate: 110 },
+  { size: 620, top: 40, right: -300, rotate: 20 },
+  { size: 440, top: 40, left: -250, points: 6, rotate: 110 },
+  { size: 440, top: '52%', left: -230, points: 6, rotate: -30 },
 ]
 
 function Numbers() {

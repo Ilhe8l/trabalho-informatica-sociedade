@@ -1,0 +1,73 @@
+.proposal {
+  margin: 0 16px;
+  border-radius: 64px;
+  overflow: hidden;
+  background: var(--blue-soft);
+}
+
+.proposals {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.proposal-card {
+  padding: 40px;
+  border-radius: 36px;
+  background: var(--white);
+}
+
+.proposal-card h3 {
+  font-size: 1.5rem;
+}
+
+.proposal-card dl {
+  margin: 28px 0 0;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 14px 16px;
+}
+
+.proposal-card dt {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--blue);
+  padding-top: 2px;
+}
+
+.proposal-card dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+.proposal-card dd:last-child {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+@media (max-width: 860px) {
+  .proposals {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .proposal {
+    margin: 0 8px;
+    border-radius: 40px;
+  }
+
+  .proposal-card {
+    padding: 28px;
+  }
+
+  .proposal-card dl {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .proposal-card dd {
+    margin-bottom: 12px;
+  }
+}

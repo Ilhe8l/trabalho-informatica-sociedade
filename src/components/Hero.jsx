@@ -7,6 +7,7 @@ const links = [
   { href: '#castells', label: 'Castells' },
   { href: '#casos', label: 'Casos' },
   { href: '#proposta', label: 'Proposta' },
+  { href: '#artefato', label: 'Artefato' },
 ]
 
 function Hero() {

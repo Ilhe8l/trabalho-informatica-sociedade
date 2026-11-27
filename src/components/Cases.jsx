@@ -22,6 +22,17 @@ const emergencyProblems = [
   },
 ]
 
+const ukProblems = [
+  {
+    title: 'Uma barreira digital',
+    text: 'O relator da ONU para extrema pobreza, Philip Alston, disse em 2019 que o sistema criou uma barreira que impede muita gente de chegar aos seus direitos. Os mais afetados: mulheres, idosos, pessoas com deficiência e quem não fala inglês.',
+  },
+  {
+    title: 'Ajuda paga à parte',
+    text: 'O governo teve que financiar apoio presencial: £39 milhões pra Citizens Advice ajudar as pessoas a fazerem o pedido online.',
+  },
+]
+
 const ppaNumbers = [
   { value: '1.419.729', label: 'participantes' },
   { value: '8.254', label: 'propostas' },
@@ -35,8 +46,8 @@ function Cases() {
       <div className="container reveal">
         <h2 className="section-title">Isso já aconteceu</h2>
         <p className="section-lead">
-          Dois casos brasileiros. Um mostra a porta fechando, o outro mostra o que dá pra
-          abrir, e até onde vai.
+          Dois casos brasileiros e um de fora. A porta fechando, o que dá pra abrir, e um
+          país que já cometeu o mesmo erro.
         </p>
 
         <article className="case">
@@ -118,6 +129,43 @@ function Cases() {
               </div>
             </div>
           </div>
+        </article>
+
+        <article className="case case-uk">
+          <div className="case-head">
+            <span className="case-year">Reino Unido · 2019</span>
+            <h3>Universal Credit: o mesmo erro, do outro lado do oceano</h3>
+            <p>
+              O Universal Credit junta vários benefícios sociais britânicos num só. Ele foi
+              desenhado como "digital by default": o pedido e o acompanhamento são feitos
+              pelo portal online. É a mesma lógica do nosso "digital por padrão".
+            </p>
+          </div>
+
+          <div className="uk-body">
+            <div className="uk-stat">
+              <strong>38%</strong>
+              <p>
+                de quem tentava conseguia verificar a própria identidade pela internet, um passo
+                obrigatório pra receber (National Audit Office, 2018).
+              </p>
+            </div>
+
+            <ul className="case-list uk-list">
+              {ukProblems.map((item) => (
+                <li key={item.title}>
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <p className="uk-lesson">
+            A lição: o próprio Reino Unido passou a tratar o apoio assistido, o "assisted
+            digital", como parte do serviço. Digital por padrão sem essa rede de apoio vira
+            exclusão.
+          </p>
         </article>
       </div>
     </section>

@@ -166,9 +166,46 @@
   background: var(--coral);
 }
 
+.uk-body {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.uk-stat strong {
+  display: block;
+  font-size: clamp(3.4rem, 7vw, 5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--coral);
+}
+
+.uk-stat p {
+  margin-top: 12px;
+}
+
+.case-list.uk-list {
+  margin: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+.uk-lesson {
+  margin-top: 56px;
+  padding: 32px 40px;
+  border-radius: 36px;
+  background: var(--blue-soft);
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
 @media (max-width: 860px) {
   .case-stats,
   .case-list,
+  .case-list.uk-list,
+  .uk-body,
   .ppa-compare {
     grid-template-columns: 1fr;
   }

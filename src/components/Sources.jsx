@@ -50,6 +50,18 @@ const sources = [
     url: 'https://coracaoesaude.iea.usp.br/wp-content/uploads/2020/05/BoletimPPS_5_8maio_FINAL.pdf',
   },
   {
+    name: 'ONU. Relatório do relator especial Philip Alston sobre o Reino Unido (A/HRC/41/39/Add.1, 2019)',
+    url: 'https://digitallibrary.un.org/record/3806308/files/A_HRC_41_39_Add-1-EN.pdf',
+  },
+  {
+    name: 'National Audit Office. Rolling out Universal Credit (2018)',
+    url: 'https://www.nao.org.uk/press-releases/rolling-out-universal-credit/',
+  },
+  {
+    name: 'HuffPost UK. 470,000 need help to apply for online-only Universal Credit (2019)',
+    url: 'https://huffingtonpost.co.uk/entry/universal-credit-online-only-help-apply_uk_5c617f69e4b0eec79b262a34',
+  },
+  {
     name: 'Cetic.br, TIC Governo Eletrônico',
     url: 'https://cetic.br/pt/pesquisa/governo-eletronico/',
   },

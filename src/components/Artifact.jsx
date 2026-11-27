@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Blobs from './Blobs'
 import './Artifact.css'
 
@@ -24,6 +25,26 @@ const blobs = [
 ]
 
 function Artifact() {
+  const [open, setOpen] = useState(null)
+
+  useEffect(() => {
+    if (open === null) return
+
+    const onKey = (e) => {
+      if (e.key === 'Escape') setOpen(null)
+      if (e.key === 'ArrowRight') setOpen((i) => Math.min(i + 1, cards.length - 1))
+      if (e.key === 'ArrowLeft') setOpen((i) => Math.max(i - 1, 0))
+    }
+
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', onKey)
+
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', onKey)
+    }
+  }, [open])
+
   return (
     <section id="artefato" className="section artifact">
       <Blobs items={blobs} />
@@ -35,13 +56,10 @@ function Artifact() {
         </p>
 
         <div className="cards">
-          {cards.map((n) => (
-            <img
-              key={n}
-              src={`/artefato/card-${n}.webp`}
-              alt={`Card ${n} do carrossel`}
-              loading="lazy"
-            />
+          {cards.map((n, i) => (
+            <button key={n} className="card-button" onClick={() => setOpen(i)}>
+              <img src={`/artefato/card-${n}.webp`} alt={`Card ${n} do carrossel`} loading="lazy" />
+            </button>
           ))}
         </div>
 
@@ -58,6 +76,48 @@ function Artifact() {
           Baixar o carrossel em PDF
         </a>
       </div>
+
+      {open !== null && (
+        <div className="viewer" onClick={() => setOpen(null)}>
+          <button className="viewer-close" aria-label="Fechar">
+            ×
+          </button>
+
+          <button
+            className="viewer-nav prev"
+            aria-label="Card anterior"
+            disabled={open === 0}
+            onClick={(e) => {
+              e.stopPropagation()
+              setOpen(open - 1)
+            }}
+          >
+            ‹
+          </button>
+
+          <img
+            src={`/artefato/card-${cards[open]}.webp`}
+            alt={`Card ${cards[open]} do carrossel`}
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          <button
+            className="viewer-nav next"
+            aria-label="Próximo card"
+            disabled={open === cards.length - 1}
+            onClick={(e) => {
+              e.stopPropagation()
+              setOpen(open + 1)
+            }}
+          >
+            ›
+          </button>
+
+          <span className="viewer-count">
+            {open + 1} / {cards.length}
+          </span>
+        </div>
+      )}
     </section>
   )
 }

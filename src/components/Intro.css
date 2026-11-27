@@ -1,0 +1,36 @@
+.intro-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+}
+
+.topics {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topics li {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--blue-line);
+}
+
+.topics li:first-child {
+  padding-top: 8px;
+}
+
+.topics h3 {
+  font-size: 1.5rem;
+}
+
+.topics p {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .intro-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

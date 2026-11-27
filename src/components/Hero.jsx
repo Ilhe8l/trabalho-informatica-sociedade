@@ -2,6 +2,7 @@ import Blob from './Blob'
 import './Hero.css'
 
 const links = [
+  { href: '#tema', label: 'Tema' },
   { href: '#numeros', label: 'Números' },
   { href: '#tese', label: 'Tese' },
   { href: '#castells', label: 'Castells' },
@@ -27,7 +28,7 @@ function Hero() {
       <Blob className="blob" />
 
       <div className="hero-content">
-        <a href="#numeros" className="hero-title">
+        <a href="#tema" className="hero-title">
           <h1>
             Quem fica de fora do <span>gov.br</span>?
           </h1>

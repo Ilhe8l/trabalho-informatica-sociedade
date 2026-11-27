@@ -1,4 +1,5 @@
 import Hero from './components/Hero'
+import Intro from './components/Intro'
 import Numbers from './components/Numbers'
 import Thesis from './components/Thesis'
 import Castells from './components/Castells'
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <Hero />
+      <Intro />
       <Numbers />
       <Thesis />
       <Castells />
